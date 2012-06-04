@@ -4,7 +4,7 @@ title: Guides
 permalink: guide
 ---
 
-# The How to Guide
+# The How to Guide Ура!!
 
 
 ## Hosting your first Rails Girls event
