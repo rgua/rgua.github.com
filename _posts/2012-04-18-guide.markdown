@@ -4,26 +4,26 @@ title: Guides
 permalink: guide
 ---
 
-# The How to Guide
+# Практическое руководство
 
 
-## Hosting your first Rails Girls event
+## Проведение первого RailsGirls мероприятия
 
-Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
+Наша цель - привлечение девушек в индустрию. Дать им в руки инструменты, рассказать о технологии и помочь сделать успешный шаг - разработать свое первое приложение!
 
-Rails Girls was founded in end of 2010 in Helsinki. Originally intended as a onetime event, we never thought we'd see so many local chapters all around the world! This guide has been put together to help you get started.
+Rails Girls бало основанно в конце 2010 года в Хельсинки. Мы никогда не могли подумать, что задуманное, как единоразовое событие, RailsGirls станет мировым движением! Это руководство создано, чтобы помочь тебе организовать мероприятие.
 
-Please contact us at [contact@railsgirls.com](mailto:contact@railsgirls.com) if you want to organise a local chapter. The roadmap for future events can be seen at [www.railsgirls.com](http://railsgirls.com).
+Пожалуйста, свяжись с нами [contact@railsgirls.com](mailto:contact@railsgirls.com), если ты хочешь организовать локальное событие. Карту будущих мероприятий можно увидеть по ссылке [www.railsgirls.com](http://railsgirls.com).
 
 
-### The Basics
-Rails Girls events are non-profit. We don’t charge the participants and do not pay for coaches or speakers. Participants don’t need any previous knowledge about programming and there are no age-limitations. All the participants need is a laptop and some curiosity. 
+### Основные понятия
+Rails Girls - некоммерческое мероприятие. Мы не берем плату с участников, также мы не платим тренерам и ораторам. Участники не должны обладать какими-то предварительными знаниями о программировании, и не должно быть никаких возрастных ограничений. Все, что им нужно, это ноутбук и любознательность. 
   
-The two-day event includes a lot of small group working and short focused talks on programming, design and web. No panel discussions or podium-talks - the spirit should be informal and hands-on. The more you can remove abstractions and add inclusivity the better.
+Двухдневное мероприятие включает в себя работу небольшими группами и короткие презентации о программировании, дизайне и вебе. Никаких заумных разговоров и подиумных презентаций - атмосфера должна быть неформальной и рабочей. Чем больше абстрактности вы можете убрать, и добавить сопричастности, тем лучше.
 
-#### Rails Girls philosophy
+#### Rails Girls философия
 
-* Show sparks, personality and keep in mind the big picture. Explain, repeat and always tie what you're telling into a larger context.
+* Покажите Show sparks, personality and keep in mind the big picture. Explain, repeat and always tie what you're telling into a larger context.
 * Internet was made by people and it doesn’t break by a little tinkering. Continuously show the human side: encourage coaches to talk about open source communities, their programming idols and their aspirations.
 * Copy-pasting rules. Programming per se isn’t central - you can't really learn to speak chinese in one day, in a similar manner you can only learn the basic vocabulary and expressions in coding. The goal of every event is to make something visible!
 * Girls run this world! But also women, ladies, even boys are allowed in. More than semantics we're interested in a mindset. Both founders were born in the Spice Girls era, they don't see the word girl as condescending or cutesy-cute.
