@@ -8,26 +8,28 @@ permalink: app
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
       
-[**First, make sure you installed Rails, otherwise please follow this link.**](/install)
+
+[**Для начала, убедитесь в том, что у вас установлен Ruby и Rails, противном случае перейдите по этой ссылке..**](/install)
 
 
-## Step 0: Get to know the tools
+## Шаг 0: Знакомство с инструментами разработки
 
-* Texteditor: (Gedit, Vim, Emacs, Komodo Edit, Sublime Text) are examples of texteditors your can use for writing code and editing files.
-* Terminal / Command Prompt is where you start the rails server and run commands.
-* Web browser (Firefox, Safari, Chrome) are for viewing your application.
+* Текстовый редактор: (Gedit, Vim, Emacs, Komodo Edit, Sublime Text) примеры тексовых редакторов, которые вы можете использовать для написания кода и редактирования файлов.
+* Terminal / CMD -  коммандная строка, где вы можете запустить rails сервер и выполнять команды.
+* Веб браузер: (Firefox, Safari, Chrome) - средство для отображения вашего приложения.
 
 
-## Step 1: Creating the application
+## Шаг 1: Создание приложения
 
-We are going to create app called *railsgirls*.
+Мы будем создавать приложение под названием *railsgirls*.
 
-First, let's open Terminal/Command Prompt:
+Сначала, откроем 'Командную Строку':
 
-* OS X: Open Spotlight, type *Terminal* and click appearing *Terminal* options.
-* Windows: Click Start-menu and search for *Command Prompt* click *Command Prompt with Ruby on Rails*.
+* OS X: Откроте Spotlight, введите *Terminal* и кликните на появившейся опции *Terminal*.
+* Windows: Откройте меню "Пуск" и кликните на *Command Prompt with Ruby on Rails*.
+* Linux: Откройте Терминал с помощью сочетания клавиш 'Ctrl+Alt+T'
 
-Next, type these commands:
+Далее, введите следующие команды:
 
 {% highlight sh %}
 mkdir projects
@@ -37,11 +39,11 @@ cd railsgirls
 rails s
 {% endhighlight %}
 
-Open [http://localhost:3000](http://localhost:3000) in browser.
+Откройте ссылку [http://localhost:3000](http://localhost:3000) в веб браузере.
 
-CTRL-C to exit the server in Terminal/Command Prompt.
+В коммандной строке нажмите сочетание клавиш Ctrl+C для остановки сервера.
 
-**Coach:** Quick explanation about what each command does. What was generated? What does the server do.
+**Тренер:** Краткое объяснение, что делает каждая из команд. Что было сгенерировано? Что делает сервер.
 
 
 ## Step 2: Create Idea scaffold
