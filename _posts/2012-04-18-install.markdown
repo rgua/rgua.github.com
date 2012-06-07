@@ -5,11 +5,11 @@ permalink: install
 ---
 
 # Рецепты установки окружения для Rails Girls
-<span class="muted">Время готовки: 5min active / 15-30min passive</span>
+<span class="muted">Время готовки: 5 минут активности / 15-30 минут ожиданий</span>
 
-To build apps and other things with Ruby on Rails, we need to setup some software and the developer environment for your computer.
+Для создания приложений и прочих вещей с Ruby On Rails мы должны установить на ваш компьютер некоторое ПО и девелоперское окружение.
 
-Follow the instructions for your operating system. If you hit into any problems, don&#8217;t panic. Inform us at the event and we can solve it together.
+Следуйте этим инструкциям для вашей операционной систем. Не паникуйте, если возникнут проблемы: сообщите нам, и мы решим их вместе.
 
 * [Установка на OS X](#setup_for_os_x)
 * [Установка на устаревшие OS X](#setup_for_os_x_old)
@@ -110,26 +110,28 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 
 <hr />
 
-## Setup for Windows
+## Установка на Windows
 
-Download [RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe) and run it. Click through the installer using the default options.
+Скачайте и запустите [RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe). 
 
-You also need a text editor to edit code files. For the workshop we recommend the free code editor Komodo Edit.
+Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
 
-* [Download the Komodo Edit and install it.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
 
-Now you should have a working Ruby on Rails programming setup. Congrats!
+Теперь вы имеете работающее Ruby On Rails окружение. Давайте выпьем!
 
 <hr />
 
-## Setup for Ubuntu
+## Установка на Ubuntu
 
-To install Ruby on Rails development environment you just need to copy and paste this line in the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
+Для установки Ruby On Rails окружение вам нужно просто скопировать и вставить эту строку в терминал. Наслаждайтесь бегущим по экрану текстам, это займёт некоторое время. Перед началом рекомендуется взять освежающий напиток.
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-You also need a text editor to edit code files. For the workshop we recommend the free code editor Komodo Edit.
+Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
 
-* [Download Komodo Edit and install it.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
+
+Теперь вы имеете работающее Ruby On Rails окружение. Поздравляем!
