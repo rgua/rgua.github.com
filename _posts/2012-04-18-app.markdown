@@ -46,11 +46,11 @@ rails s
 **Тренер:** Краткое объяснение, что делает каждая из команд. Что было сгенерировано? Что делает сервер.
 
 
-## Step 2: Create Idea scaffold
+## Шаг 2: Создание scaffold&#8217;а для идей
 
-We are using Rails&#8217; scaffolds to generate a starting point that allows us to list, add, remove, edit, and view things; in our case ideas.
+Воспользуемся Rails&#8217; scaffold&#8217;ом для генерирования основы, которая позволит пролистать, добавить, удалить, редактировать и просматривать, в нашем случае, идеи.
 
-**Coach:** What is a scaffold (1. the command, 2. the model name and related db table; pluralization/naming conventions, 3. attributes and types)? What are migrations and when do you need to do them, why?
+**Тренер:** Что такое scaffold (1. команда, 2. имя модели и связь с таблицей БД ; плюрализация/именование, 3. аттрибуты и типы)? Что такое миграции, в каких случаях они необходимы и зачем?
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
@@ -58,9 +58,9 @@ rake db:migrate
 rails s
 {% endhighlight %}
 
-Open [http://localhost:3000/ideas](http://localhost:3000/ideas) in browser.
+Откройте ссылку [http://localhost:3000/ideas](http://localhost:3000/ideas) в веб браузере.
 
-CTRL-C exits the server when you have clicked around for a little.
+После небольшого просмотра, остановите сервер (сочетание клавиш Ctrl+C в коммандной строке)
 
 ## Step 3: Design
 
