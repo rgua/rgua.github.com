@@ -62,31 +62,31 @@ rails s
 
 После небольшого просмотра, остановите сервер (сочетание клавиш Ctrl+C в коммандной строке)
 
-## Step 3: Design
+## Шаг 3: Дизайн
 
 **Coach:** Talk about the relationship of HTML and Rails; what part of views is HTML and what is Embedded Ruby (ERB)? How does this relate to MVC (models and controllers control the logic of dynamically generating HTML, or views)?
 
-Design doesn&#8217;t look nice. Let&#8217;s do something about it. We&#8217;ll use Twitter&#8217;s Bootstrap project to give us nicer default styles really easily.
+Дизайн не выглядит прекрасным. Давайте сделаем с эти что-нибудь. Мы используем Twitter Bootstrap проект для получения милых стилей.
 
-Open app/views/layouts/application.html.erb and add on top of
+Откройте app/views/layouts/application.html.erb и добавьте выше этого
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application" %>
 {% endhighlight %}
 
-the line
+строку
 
 {% highlight erb %}
 <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
-and swap
+и замените
 
 {% highlight erb %}
 <%= yield %>
 {% endhighlight %}
 
-for
+на
 
 {% highlight erb %}
 <div class="container">
@@ -94,9 +94,9 @@ for
 </div>
 {% endhighlight %}
 
-Let&#8217;s also add topbar and footer to the layout and style those and the ideas table.
+Давайте также добавим topbar и header, а также стили для них и таблицы идей.
 
-To the application.html.erb under `<body>` add:
+Добавьте в application.html.erb после `<body>`:
 
 {% highlight html %}
 <div class="navbar navbar-fixed-top">
@@ -111,7 +111,7 @@ To the application.html.erb under `<body>` add:
 </div>
 {% endhighlight %}
 
-and before `</body>` add:
+и перед `</body>`:
 
 {% highlight html %}
 <footer>
@@ -121,7 +121,7 @@ and before `</body>` add:
 </footer>
 {% endhighlight %}
 
-Open app/assets/stylesheets/application.css and add to the bottom:
+Откройте app/assets/stylesheets/application.css и добавьте в конец:
 
 {% highlight css %}
 #logo { 
@@ -138,7 +138,7 @@ td.picture { width: 140px; }
 td.picture img { width: 140px; }
 {% endhighlight %}
 
-**Coach:** Talk a little about CSS and layouts.
+**Coach:** Немного расскажите о CSS и шаблонах.
 
 
 ## Step 4: Adding picture uploads
