@@ -12,7 +12,7 @@ To build apps and other things with Ruby on Rails, we need to setup some softwar
 Follow the instructions for your operating system. If you hit into any problems, don&#8217;t panic. Inform us at the event and we can solve it together.
 
 * [Установка на OS X](#setup_for_os_x)
-* [Установка на старые OS X](#setup_for_os_x_old)
+* [Установка на устаревшие OS X](#setup_for_os_x_old)
 * [Установка на Windows](#setup_for_windows)
 * [Установка на Ubuntu](#setup_for_ubuntu)
 
@@ -64,49 +64,49 @@ Please restart your terminal.
 
 <hr />
 
-## Setup for OS X Old
+## Установка на устаревшие OS X
 
-First we need to install general tools needed to install other developer software.
+Во-первых, мы должны установить общие инструменты для установки другого ПО для разработки.
 
-**Step 1.** Lets check the version of the operating system.
+**Шаг 1.** Давайте проверим версион операционной системы.
 
-Click the Apple menu and choose *About this Mac* (Picture 1).
+Кликните на Apple меню и выберите *About this Mac* (Изображение 1).
 
 ![Apple menu](/images/1.png "Apple menu")
 
-Picture 1
+Изображение 1
 
- **Step 2.** In the window you find the version of your operating system (Picture 2). If your version number starts with 10.6 or 10.7 this guide is for you. If it&#8217;s something else, we can setup your machine at the event.
+**Шаг 2.** В этом окне вы найдете версию вашего операционной системы (Изображение 2). Если номер версии начинается с 10.6 или 10.7, этот гайд для вас. Иначе, мы можем настроить ваш комп на мероприятии.
 
-![About this Mac dialog](/images/2.png "About this Mac dialog")
+![Окно About this Mac](/images/2.png "About this Mac dialog")
 
-Picture 2
+Изображние 2
 
-**Step 3.** Download and install these developer tools for OS X depending of your system version number.
+**Шаг 3.** Скачайте и установите эти инструменты для разработки под вашу версию OS X.
 
-* [Installer for 10.7](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg) <span class="muted">(273Mb)</span>
+* [Установщик for 10.7](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg) <span class="muted">(273Mb)</span>
 
-* [Installer for 10.6](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg) <span class="muted">(273Mb)</span>
+* [Установщик for 10.6](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg) <span class="muted">(273Mb)</span>
 
-**Step 4.** After the installer has run, open Terminal.app. Click the Spotlight (magnifying glass icon in the top right corner), type *Terminal.app* and click the option that appears (Picture 3).
+**Шаг 4.** После того, как установщик был запущен, откройте Terminal.app. Щелкните по Spotlight (иконка в парвом верхнем углу), напечатайте *Terminal.app* и выберите появившийся пункт (Изображение 3).
 
 ![Spotlight](/images/3.png "Spotlight")
 
-Picture 3
+Изображение 3
 
-**Step 5.** Now copy and paste this line in the Terminal and press Enter. Enjoy the text flying on the screen, it will take quite some time (approximately 30 minutes). The installer might ask for your administrator password. Grabbing a refreshing drink before starting is encouraged!
+**Step 5.** Теперь скопируйте и вставьте эти строки в ваш терминал и нажмите Enter. Наслаждайтесь бегущим по экрану текстом, это займёт минут 30. Установщик может спросить ваш пароль администратора.
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx-rvm.sh)
 {% endhighlight %}
 
- ![You've done it](/images/complete.png "You've done it")
+ ![Вы сделали это!](/images/complete.png "You've done it")
 
-Now if everything went right, you should have a working Ruby on Rails programming setup. Congrats!
+Теперь, если всё прошло хорошо, вы должны получить работающее Ruby On Rails окружение. Ура!
 
-**Final step.** Install a text editor to edit code files. For the workshop we recommend the free code editor Komodo Edit.
+**Последний шаг.** Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
 
-* [Download Komodo Edit and install it.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
 
 <hr />
 
