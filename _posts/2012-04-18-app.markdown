@@ -226,40 +226,40 @@ class Idea < ActiveRecord::Base
 **Coach:** Расскажите немного о HTML.
 
 
-## Step 5: Finetune the routes
+## Step 5: Правильная настройка роутов
 
-If you try to open [http://localhost:3000](http://localhost:3000) it still shows the default page. Let&#8217;s make it redirect to the ideas page.
+Если вы попробуете открыть [http://localhost:3000](http://localhost:3000), то всё еще увидете страницу по-умолчанию. Давайте сделаем перенаправление на страницу идей.
 
-On OS X and Linux, in the Terminal run:
+В OS X и Linux запутсите в терминале:
 
 {% highlight sh %}
 rm public/index.html
 {% endhighlight %}
 
-In Windows, in the Command Prompt run:
+В Windows:
 
 {% highlight bat %}
 del public\index.html
 {% endhighlight %}
 
-Then open config/routes.rb and add the following after the first line:
+После этого откройте open config/routes.rb и добавьте следующее после первой строки:
 
 {% highlight ruby %}
 root :to => redirect("/ideas")
 {% endhighlight %}
 
-**Coach:** Talk about routes.
+**Coach:** Расскажите о роутах.
 
 
-## What next?
+## Что далее?
 
-* Add design using HTML &amp; CSS
-* Add ratings
-* Use CoffeeScript (or JavaScript) to add interaction
-* Add proper picture resizing to make loading the pictures faster
+* Добавьте дизайн, используя HTML и CSS
+* Добавьте рейтинги
+* Используйте CoffeScript (или JavaScript) для создания интерактивности
+* Добавьте изменение размера изображений для более быстрой загрузки
       
 
 ## Дополнительные гайды
 
-* GUIDE 1: [Add commenting by Janika Liiv](/commenting)
-* GUIDE 2: [Put your app online with Heroku by Terence Lee](/heroku)
+* Гайд 1: [Добавление комментирования, от Janika Liiv](/commenting)
+* Гайд 2: [Размещение вашего приложения на Heroku, от Terence Lee](/heroku)
