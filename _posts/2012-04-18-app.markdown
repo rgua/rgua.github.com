@@ -259,7 +259,7 @@ root :to => redirect("/ideas")
 * Add proper picture resizing to make loading the pictures faster
       
 
-## Additional Guides
+## Дополнительные гайды
 
 * GUIDE 1: [Add commenting by Janika Liiv](/commenting)
 * GUIDE 2: [Put your app online with Heroku by Terence Lee](/heroku)
