@@ -141,89 +141,89 @@ td.picture img { width: 140px; }
 **Coach:** Немного расскажите о CSS и шаблонах.
 
 
-## Step 4: Adding picture uploads
+## Шаг 4: Добавление загрузки изображений.
 
-We need to install additional library to add image processing.
+Нам наобходимо установить библиотеку для добавления возможности работы с изображниями.
 
-Open Gemfile in the project and add
+Откройте Gemfile в проекте и добавьте
 
 {% highlight ruby %}
 gem 'carrierwave'
 {% endhighlight %}
 
-under the line
+ниже линии
 
 {% highlight ruby %}
 gem 'sqlite3'
 {% endhighlight %}
 
-**Coach:** Tell what libraries are and why they are used. Maybe few words about Open Source?
+**Coach:** Расскажите, что такое библиотеки и почему мы их используем. Может быть, несколько слов о OpenSource?
 
-Now we generate the needed code for picture handling. In the Terminal/Command Prompt run:
+Теперь мы сгенерируем необходимый код для захвата изображений. ВЗапустите в терминале:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-**At this point you need to restart the Rails server process in Terminal/Command Prompt.** This is needed for the app to load the added gem.
+**В этот момент вы должны перезапустить Rails сервер из командой строки.** Это необходимо для того, чтобы приложение загрузило добавленный gem.
 
-Then you can start adding the picture upload by running a command:
+После этого вы можете добавить возможность загрузки изображений, выполнив комманду:
 
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
 
-Open app/models/idea.rb and add
+Откройте app/models/idea.rb и добавьте
 
 {% highlight ruby %}
 mount_uploader :picture, PictureUploader
 {% endhighlight %}
 
-under the line
+ниже строки
 
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
 {% endhighlight %}
 
-Open app/views/ideas/_form.html.erb and change
+Откройте app/views/ideas/_form.html.erb и измените
 
 {% highlight erb %}
 <%= f.text_field :picture %>
 {% endhighlight %}
 
-to
+на
 
 {% highlight erb %}
 <%= f.file_field :picture %>
 {% endhighlight %}
 
-and
+а также
 
 {% highlight erb %}
 <%= form_for(@idea) do |f| %>
 {% endhighlight %}
 
-to
+на
 
 {% highlight erb %}
 <%= form_for(@idea, :html => {:multipart => true}) do |f| %>
 {% endhighlight %}
 
-The view doesn&#8217;t look nice, it only shows a path to the file, so let&#8217;s fix it.
+Шаблон невыглядит неприятным, он только лишь показывает путь к файлу. Ну, давайте исправим это.
 
-Open app/views/ideas/show.html.erb and change
+Откройте app/views/ideas/show.html.erb и измените
 
 {% highlight erb %}
 <%= @idea.picture %>
 {% endhighlight %}
 
-to
+на
 
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
 
-**Coach:** Talk a little about HTML.
+**Coach:** Расскажите немного о HTML.
 
 
 ## Step 5: Finetune the routes
