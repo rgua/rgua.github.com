@@ -3,85 +3,88 @@ layout: default
 title: Commenting functionality for the Rails Girls app
 permalink: commenting
 ---
-# Commenting for Rails Girls App
-*Created by Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
+# Комментарии для приложения Rails Girls
+*от Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
 
-We are going to add the possibility to comment ideas in your *railsgirls* application.
+Мы начинаем добавление воможности комментривания идей в вашем *railsgirls* приложении.
 
-The instructions for installing rails and building the ideas app can be found [here](/app)
+Инструкции по установке rails и создании приложения идей могут быть найдеты [здесь](/app)
 
-## Step 1: Add foreigner gem
+## Шаг 1: Добавление гема foreigner
 
-Add to Gemfile
+Добавьте в Gemfile
 {% highlight ruby %}
 gem 'foreigner'
 {% endhighlight %}
 
-In your terminal stop the server if it's running and type
+Остановите сервер, если он запущен, и запустите в терминале
 {% highlight sh %}
 bundle install
 {% endhighlight %}
 
-## Step 2: Create comment scaffold
+## Шаг 2: Создание скаффолда комментария
 
-Create comment scaffold, with the commentator name, the comment body (contents of the comment) and with the reference to the ideas table (idea_id). 
+Создайте скаффолд комментария с именем комментатора, содержимым комментария и связью на таблицу ideas(idea_id).
+
 {% highlight sh %}
 rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 
-## Step 3: Add foreign key connections
-Add to migration the foreing key  connection. Open db/migrate/ and the file, which name ends with 'create_comments.rb'. After
+## Шаг 3: Добавление внешнего ключа для связи
+
+Добавьте в миграцию связь через внешний ключ. Откройте db/migrate и найдите файл, оканчивающийся на 'create_comments.rb'. После строки
 {% highlight ruby %}
 t.timestamps
 end
 {% endhighlight %}
 
-add
+добавьте
 {% highlight ruby %}
 add_foreign_key :comments, :ideas
 {% endhighlight %}
 
-Now migrate the database changes by typing in your terminal
+Теперь запустите миграции, напечатав в терминале
 {% highlight sh %}
 rake db:migrate
 {% endhighlight %}
 
-start your server with:
+Запустите сервер:
 {% highlight sh %}
 rails s
 {% endhighlight %}
 
-## Step 4: Add relations to models
+## Шаг 4: Добавление связей в модели
 
-You need to make sure that Rails knows the connection between objects (ideas and comments). 
-As one idea can have many comments we need to make sure the idea model knows that. 
-Open app/models/idea.rb and after the row
+Вы должны убедиться, что Rails знают о связи между объектами(ideas и comments).
+Одна идея может иметь множествоо комментарией, и мы должны убедиться, что модель Idea знает об этом.
+
+Откройте app/models/idea.rb и после строки
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
 {% endhighlight %}
-add
+добавьте
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-The comment also has to know that it belongs to an idea.So open app/models/comment.rb and after
+Модель Comment также должна знать о своей связи с Idea. Так что отройте app/models/comment.rb и после строки
 {% highlight ruby %}
 class Comment < ActiveRecord::Base
 {% endhighlight %}
 
-add the row
+добавьте
 {% highlight ruby %}
 belongs_to :idea
 {% endhighlight %}
 
-## Step 5: Render the comment form and existing comments
+## Шаг 5: Отображение формы комментирования и существующих комментариев
 
-Open app/views/ideas/show.html and after the image_tag
+Откройте app/views/ideas/show.htmlи после image_tag
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
 
-add
+добавьте
 {% highlight erb %}
 <h3>Comments</h3>
 <% @idea.comments.each do |comment| %>
@@ -94,17 +97,18 @@ add
 <%= render 'comments/form' %>
 {% endhighlight %}
 
+В app/controllers/ideas_controller.rb добавьте в show экшен после этой строки
 In app/controllers/ideas_controller.rb add to show action after the row
 {% highlight ruby %}
 @idea = Idea.find(params[:id])
 {% endhighlight %}
 
-this
+вот это
 {% highlight ruby %}
 @comment = @idea.comments.new
 {% endhighlight %}
 
-Open comments/_form.html and after
+Откройте comments/_form.html и после
 {% highlight erb %}
   <div class="field">
     <%= f.label :body %><br />
@@ -112,9 +116,8 @@ Open comments/_form.html and after
   </div>
 {% endhighlight %}
 
-
-add the row
+добавьте строку
 {% highlight erb %}
 <%= f.hidden_field :idea_id %>
 {% endhighlight %}
-That's it. Now view an idea you have inserted to your application and there you should see the form for inserting a comment
+Вот и всё. Теперь просмотрите идею, которую вы создали, и вы увидите форму для добавления комментария.
