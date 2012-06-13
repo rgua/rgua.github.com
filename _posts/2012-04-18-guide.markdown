@@ -17,8 +17,8 @@ Rails Girls бало основанно в конце 2010 года в Хель�
 
 
 ### Основные понятия
-Rails Girls - некоммерческое мероприятие. Мы не берем плату с участников, также мы не платим тренерам и ораторам. Участники не должны обладать какими-то предварительными знаниями о программировании, и не должно быть никаких возрастных ограничений. Все, что им нужно, это ноутбук и любознательность. 
-  
+Rails Girls - некоммерческое мероприятие. Мы не берем плату с участников, также мы не платим тренерам и ораторам. Участники не должны обладать какими-то предварительными знаниями о программировании, и не должно быть никаких возрастных ограничений. Все, что им нужно, это ноутбук и любознательность.
+
 Двухдневное мероприятие включает в себя работу небольшими группами и короткие презентации о программировании, дизайне и вебе. Никаких заумных разговоров и подиумных презентаций - атмосфера должна быть неформальной и рабочей. Чем больше абстрактности вы можете убрать, и добавить сопричастности, тем лучше.
 
 #### Rails Girls философия
@@ -32,34 +32,39 @@ Rails Girls - некоммерческое мероприятие. Мы не б�
 
 Every Rails Girls event starts with an installation-fest where the setup is pre-installed to the girls computers. See [railsgirls.com/install](http://railsgirls.com/install) for readymade instructions. The installation-fest can include short talks, but the main point is to offer some sparkling wine, get everything set for the next day and the girls to know each other. The timeframe is tentative - you know your audience and what suits them best. We've hosted events both during weekend and weekdays. Also, doing two evenings (4PM - 22 PM) might be a more suitable solution for your community needs.
 
-#### Learning objectives of the workshop:
+#### Цели тренинга:
 
-* Understanding the difference between a dynamic and static web page.
-* Vocabulary of the web: developing a basic understanding of what components make a web application. Understanding the ABCs of coding: strings, methods, variables, arrays, exclamations, chaining, hashed, symbols, blocks.. as well as the tools (terminal, browser, text editor). Creating a conceptual understanding of the web's building blocks: programming languages, frameworks, databases, infrastructure.
-* Have an idea of how to move forward in the programming world: both online and offline.
+* Понимание разницы между динамической и статической веб-страницей.
+* Словарь Интернета: получение базовых знаний, из чего состоит web-приложение.
+Изучение основ программирования: строки, методы, переменные, массивы, знаки восклицания, хеши, символы, блоки..
+А так же инструменты(терминал, броузер, текстовые редактор). Базовое понимание основных концепций: языки программирования,
+фрейфорки, базы данных.
+* Понять как развиваться дальше в мире прораммирования: в online и в offline.
 
-#### Friday evening: Installation
+#### Пятница, вечер: Установка
 
-19:00 - 21:00 Installations and getting to know each other
-*Hint*: Have a coach table where problematic computers can be brought. 
+19:00 - 21:00 Установка и знакомство друг с другом.
+*Подсказка*: Хорошо иметь столик с тренерами, куда можно принести "проблемные" компьютеры с неправильными ОС ;).
 
-Some installations will fail: be prepared to set girls in pairs, don't use endless amounts of time.
+У некоторых попытки установить нужный проваляться: будьте готовы посадить девушек по парам, не тратьте бесконечное количество времени.
 
-Decorate the place with balloons and posters. Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening. 
+Украсьте место воздушными шариками и постерами. Добавьте вместе веселья
+<a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> на вечер.
 
-Come up with activities to break the ice: ask the girls to write why they are attending the event on post-its or to draw and describe their dream web app. 
+Проявите активность, чтобы растопить лёд: поспрашивайте девушек, почему они решили посетить
+это мероприятие, после чего попросите описать web-приложение ихней мечты.
 
-21 -> Coach dinner
-Go through the application with the coaches during dinner. 
+21 -> Тренерский ужин (**WTF 0_o**)
+Просмотрите приложение вместе с тренерами во время ужина.
 
 
-#### Saturday: Workshop
+#### Суббота: тренинг
 
-09:00 - 10:00 Registration and coffee
-*Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise. 
+09:00 - 10:00 Регистрация и кофе
+*Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise.
 
 10:00 - 10:10 Welcoming words
-*Hint* Mention sponsors, show what we'll build, tell what programming is. 
+*Hint* Mention sponsors, show what we'll build, tell what programming is.
 
 10:30 - 11:00 UX workshop
 
@@ -68,13 +73,13 @@ Go through the application with the coaches during dinner.
 
 Themes to cover:
 + The difference between dynamic and static websites: what are web apps?
-+ What are programming languages? What is Rails? 
++ What are programming languages? What is Rails?
 + The tools we’ll be using: browser, terminal, code editor, folder structure
 
-Show & tell with <a href="http://tryruby.org">tryruby.org</a>, first three-four exercises all together. 
+Show & tell with <a href="http://tryruby.org">tryruby.org</a>, first three-four exercises all together.
 
 11:30 - 13:00 Workshop time
-Going (slowly!) through the curriculum at <a href="http://railsgirls.com/app">railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean. 
+Going (slowly!) through the curriculum at <a href="http://railsgirls.com/app">railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean.
 
 Try to aim for simple explanations even with the cost of accuracy. You don’t need to talk about all underlying concepts. Just try to answer questions when they arise, or move on if they’re too hard or out of scope. You are not here to teach perfect coding skills but to show how to get stuff done. One has to learn how to build web apps before learning how to do it well.
 
@@ -92,28 +97,28 @@ Concepts to cover:
 13:00 - 14:00 Lunch
 
 14:00 - 14:30 Bentobox exercise
-Putting technical jargon into a context with a conceptual model called Bentobox. 
+Putting technical jargon into a context with a conceptual model called Bentobox.
 
-Two exercises: 1) Going through the 10 technical concepts with the physical Bentobox boards.  2) Going through the words the girls have themselves submitted with the coaches. 
+Two exercises: 1) Going through the 10 technical concepts with the physical Bentobox boards.  2) Going through the words the girls have themselves submitted with the coaches.
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
 + [Instruction video](http://vimeo.com/39049632)
 
-14:30 - 18:00 Workshop time. 
+14:30 - 18:00 Workshop time.
 
-Time to continue working on the applications. Monitor the situation: when it seems like people have a hard time concentrating, have the coaches or other speakers give quick lightning talks. 
+Time to continue working on the applications. Monitor the situation: when it seems like people have a hard time concentrating, have the coaches or other speakers give quick lightning talks.
 
-Example topics for lighting talks: 
+Example topics for lighting talks:
 + Real (female) programmers telling what their career has been like.
-+ Design: UX & UI. Making mockups together either with paper or computer. 
++ Design: UX & UI. Making mockups together either with paper or computer.
 + Fun ways of explaining technical concepts and recent frameworks: what is CoffeeScript explained in 80s pop songs? How would you describe GitHub? What coding and creative writing have in common?
 + Show us something real: don’t speak in abstractions, be specific and tell stories.
 
-Once everyone has finished their app, there is time to extend the application by modifying the CSS, implementing commenting systems etc. Allow enough time for experimentation. 
+Once everyone has finished their app, there is time to extend the application by modifying the CSS, implementing commenting systems etc. Allow enough time for experimentation.
 
 19:00 After party
 *Hint:*
-Invite everyone, also the local developers, boys, those who weren't accepted, to join! 
+Invite everyone, also the local developers, boys, those who weren't accepted, to join!
 
 [Fork this project on GitHub][github], add yourself, and send us a pull request.
 
@@ -157,50 +162,50 @@ One of the big aims of Rails Girls is to make it more mainstream for girls to bu
 
 Rails Girls talks to a demographic that might be hard to reach other ways: women who have an interest in technology, who are possible users, employees or partners of the sponsoring company.
 
-We are looking for sponsors who are active participants in the local technology scene, whether it’s a startup or a big corporation, a non-profit or a government organization. 
+We are looking for sponsors who are active participants in the local technology scene, whether it’s a startup or a big corporation, a non-profit or a government organization.
 
-Also non-traditional technology companies can be approached: kids stores, universities, women's magazines, beverage brands etc. They all should however have some affiliation or interest in technology. 
+Also non-traditional technology companies can be approached: kids stores, universities, women's magazines, beverage brands etc. They all should however have some affiliation or interest in technology.
 
 Rails Girls should always be kept non-profit: if there's money left, it should be used to support the future activities of the attendees. Don’t forget that you don’t need that much funding and even a two-person startup could be very willing to chip in.
 
 ### Example letter for sponsors
 
-Dear xxx, 
+Dear xxx,
 
-We are organizing a Rails Girls programming workshop in (insert city) on (insert dates). 
+We are organizing a Rails Girls programming workshop in (insert city) on (insert dates).
 
-Rails Girls is a two-day non-profit event for women and girls to give them a great first experience in software craftmanship. We aim to give the tools to understand technology along with the community and inspiration to get started.  
+Rails Girls is a two-day non-profit event for women and girls to give them a great first experience in software craftmanship. We aim to give the tools to understand technology along with the community and inspiration to get started.
 
 Rails Girls is not just about programming, it’s about building things. During the workshop, we’ll build an application and also have inspiring lightning talks and exercises.
 
-For a closer look, please see www.railsgirls.com for past events and coverage.Here’s also a short video on the Berlin event held in April 2012: [http://vimeo.com/40852182](http://vimeo.com/40852182) 
+For a closer look, please see www.railsgirls.com for past events and coverage.Here’s also a short video on the Berlin event held in April 2012: [http://vimeo.com/40852182](http://vimeo.com/40852182)
 
-We are now looking for sponsors to help us realize this all. 
-We’d love to have your support! 
+We are now looking for sponsors to help us realize this all.
+We’d love to have your support!
 
 Yours, name
 
 
 
-### How much does it cost? 
+### How much does it cost?
 
-The costs below are estimated for 30 participants, 10 coaches - but they may vary a lot. It's easiest to try to get a local sponsor to pay the bills directly or partner with someone who has a set account to handle money. These calculations are done in Finland, in €, where food & alcohol is very expensive, but spaces are often free. All in all you should be able to organise an event easily for a little over a thousand euros.  				
+The costs below are estimated for 30 participants, 10 coaches - but they may vary a lot. It's easiest to try to get a local sponsor to pay the bills directly or partner with someone who has a set account to handle money. These calculations are done in Finland, in €, where food & alcohol is very expensive, but spaces are often free. All in all you should be able to organise an event easily for a little over a thousand euros.
 
-+ **Sparkling wine + cups** for the installation festival. 6 bottles, 6 euros a bottle. 36 euros. 
++ **Sparkling wine + cups** for the installation festival. 6 bottles, 6 euros a bottle. 36 euros.
 
 + **Breakfast Coffee**, pastry. 40 times around 5 euros. 200 euros
 
-+ **Lunch.** Catered lunch can be around 15 euros, but you can do with a lot less by cooking yourself.  Add some water and coffee (50 euros). 650 euros. 		
++ **Lunch.** Catered lunch can be around 15 euros, but you can do with a lot less by cooking yourself.  Add some water and coffee (50 euros). 650 euros.
 
 + **Marketing materials.** Printing workbooks, ordering stickers, posters and other swag. Again, varies a lot, maybe you can use someones printer, but at least around 200 should be reserved.
 
-+ **Coach dinner.** At a restaurant or homemade. A way to say thank you to the coaches for their volunteer work. Around 20 euros per head. 200 euros. 		
++ **Coach dinner.** At a restaurant or homemade. A way to say thank you to the coaches for their volunteer work. Around 20 euros per head. 200 euros.
 
-+ **Space.** Try to get this one sponsored/free, they can be really expensive. Often startups are co-operative and can offer their space for use (esp. on weekends).	0 - XXXX euros. 
++ **Space.** Try to get this one sponsored/free, they can be really expensive. Often startups are co-operative and can offer their space for use (esp. on weekends).	0 - XXXX euros.
 
-+ **Afterparty.** It's nice if you can throw a good party with free beverages, but can also be done low-key in a local bar or on set/ in the park!	0 - XXXX euros. 	
++ **Afterparty.** It's nice if you can throw a good party with free beverages, but can also be done low-key in a local bar or on set/ in the park!	0 - XXXX euros.
 
-+ **Travel expenses.**	If you don't have any RG-team members in your country, consider inviting us over. We don't need fancy hotels, promise! Same if you want to invite speakers to your event. 	0 - XXX		
++ **Travel expenses.**	If you don't have any RG-team members in your country, consider inviting us over. We don't need fancy hotels, promise! Same if you want to invite speakers to your event. 	0 - XXX
 
 + *Total 1286 euros*.
 
@@ -246,16 +251,16 @@ Ask where local developer meetings are usually hosted. Often co-working spaces a
 
 Rails Girls events are organized around small groups, ideally maximum of 4-5 persons per one coach. The coaches don’t need to be hardcore experts on Rails - basic knowledge and willingness to explain trumps expertise. We are looking for people who like answering questions and can keep an upbeat and positive atmosphere through a period of 8 hours!
 
-You can get to know the curriculum by checking out [railsgirls.com/app](http://railsgirls.com/app). There is also always a pre-event coach dinner where we’ll go through some pedagogical suggestions and check everyone knows what is happening. Avoid jargon, tie examples to what your doing, encourage asking questions. The installation instructions can be found at [railsgirls.com/install](http://railsgirls.com/install). We also understand that coaches are human and that for most of the people this is the first time teaching something. Worry not - the girls have always been really happy with whatever they learn and just the chance to ask questions is enough. 
+You can get to know the curriculum by checking out [railsgirls.com/app](http://railsgirls.com/app). There is also always a pre-event coach dinner where we’ll go through some pedagogical suggestions and check everyone knows what is happening. Avoid jargon, tie examples to what your doing, encourage asking questions. The installation instructions can be found at [railsgirls.com/install](http://railsgirls.com/install). We also understand that coaches are human and that for most of the people this is the first time teaching something. Worry not - the girls have always been really happy with whatever they learn and just the chance to ask questions is enough.
 
 
 We hope the coaches are ok with having their name and twitter-id/github/some mean of contact on railsgirls.com so the girls always have a local face to answer their questions.
 
-In addition, we encourage coaches to come up with additional exercises for the group. After completing the ideation app many girls will want to try tweaking the look & feel of the site, implementing commenting, Facebook sharing, pushing the app to Heroku, etc. 
+In addition, we encourage coaches to come up with additional exercises for the group. After completing the ideation app many girls will want to try tweaking the look & feel of the site, implementing commenting, Facebook sharing, pushing the app to Heroku, etc.
 
 ##### Sample letter for potential coaches
 
-"Dear community member, 
+"Dear community member,
 
 We wish to invite you to take part in the Rails Girls event on (insert date). The event is aimed for girls and women with no previous programming experience, but a lot of passion to building things. Rails Girls is an international non-profit, volunteer-based workshop. We've had events in Shanghai, Berlin, Helsinki, and Singapore. We expect to receive around a 100 applications.
 
@@ -298,9 +303,9 @@ After selecting participants we generally split them into three groups:
 
 Тема письма: Rails Girls воркшоп - добро пожаловать!
 
-Дорогой участник, 
+Дорогой участник,
 
-Поздравляем! Мы счастливы пригласить тебя на Rails Girls воркшоп в (городе). Мы очень надеемся, что на этом семинаре ты получишь свой первый опыт создания веб-приложений на Ruby on Rails. 
+Поздравляем! Мы счастливы пригласить тебя на Rails Girls воркшоп в (городе). Мы очень надеемся, что на этом семинаре ты получишь свой первый опыт создания веб-приложений на Ruby on Rails.
 
 Что дальше?
 
@@ -320,7 +325,7 @@ After selecting participants we generally split them into three groups:
 Если у тебя есть какие-то вопросы, не стесняйся спрашивать!
 
 
-С уважением, 
+С уважением,
 
 (подпись)
 
@@ -332,7 +337,7 @@ After selecting participants we generally split them into three groups:
 
 К сожадению мы не можем пригласить тебя на мероприятие в этот раз. Желая персонально помочь каждому участнику, мы можем принять только часть заявок. Но мы занесли тебя в список ожидающих, и если освободиться место, мы обязательно тебе сообщим!
 
-Скорее всего мы будем еще организовывать мероприятия в твоем городе. Следи за твиттером twitter.com/railsgirls или нашей фейсбук-страничкой facebook.com/railsgirls. 
+Скорее всего мы будем еще организовывать мероприятия в твоем городе. Следи за твиттером twitter.com/railsgirls или нашей фейсбук-страничкой facebook.com/railsgirls.
 
 С уважением,
 
@@ -345,8 +350,8 @@ Dear Rails Girls,
 Thank you for taking part in the Rails Girls event. We truly felt lucky to have such a talented & enthusiastic crowd of people with us and hope many of you will continue working with Rails in the future - you have the tools, now build something cool!
 
 (Say a few words about the sponsors and coaches - thank you for the community)
- 
-Three things we want to share: 
+
+Three things we want to share:
 
 Workshop Materials
 (Almost all) materials can be found in the guides section at http://guides.railsgirls.com. You can find presentations, materials and instructions from the workshop. If you took pictures or blogged about the event - let us know! We'll be publishing regularly on blog.railsgirls.com
@@ -355,15 +360,15 @@ Make Rails Girls better - give us feedback!
 We want to hear from you! Give us feedback about the workshop or how we can make the event better – it’s really quick, and it’ll help us improve our workshop at railsgirls.com/feedback
 
 Keep on coding!
-We realize there was quite a lot of stuff in todays lecture and for most of you it all felt a little overwhelming. We strongly recommend trying out Rails for Zombies exercise at http://www.codeschool.com/ latest by next weekend, it'll refreshen all you've learned so far and teach you some more. 
+We realize there was quite a lot of stuff in todays lecture and for most of you it all felt a little overwhelming. We strongly recommend trying out Rails for Zombies exercise at http://www.codeschool.com/ latest by next weekend, it'll refreshen all you've learned so far and teach you some more.
 
-Two things to keep you going: 
+Two things to keep you going:
 - (Insert here a couple of community events that the participants should take part in)
 
 There was a LOT of interest in doing follow-up events. If you have ideas for this or want to volunteer for the organizing team, let us know and sign up for the group e-mailing list at http://groups.google.com/group/rails-girls-team!
- 
+
 And thats all for now,
-Your Rails Girls team 
+Your Rails Girls team
 
 
 
