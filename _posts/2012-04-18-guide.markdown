@@ -294,47 +294,49 @@ After selecting participants we generally split them into three groups:
 3. people with a little experience in programming or a background in computer sciences. You can use the different name-tags for each group if you want to (rubies, foxes, octocats, rails..)
 
 
-##### Sample letter of acceptance
+##### Пример письма-приглашения
 
-Title: Rails Girls workshop - welcome!
+Тема письма: Rails Girls воркшоп - добро пожаловать!
 
-Dear attendee, 
+Дорогой участник, 
 
-Congratulations! We’re happy to invite you to join in on the  Rails Girls workshop in (insert city). We hope that this workshop will provide you a great first experience on building web apps. 
+Поздравляем! Мы счастливы пригласить тебя на Rails Girls воркшоп в (городе). Мы очень надеемся, что на этом семинаре ты получишь свой первый опыт создания веб-приложений на Ruby on Rails. 
 
-What happens next?
+Что дальше?
 
-(Insert date for installation fest) starts at (insert time) with an installation fest - so please bring your laptop with you! You should also try to pre-install Rails with instructions from <http://guides.railsgirls.com/install/>
+Регистрация на мероприятие (вставить время) (вставить дату).
 
-We will hold the event in (insert address)
+(Дата преведения установочной вечеринки) в (время начала) начинается вечеринка по установке необходимого ПО - так что захвати свой ноутбук с собой! Еще мы рекомендуем тебе попробовать установить Rails самостоятельно по инструкции на <http://rgua.github.com/install/>.
 
-On (insert date) we’ll dive into development. We’ll work in small groups with four to six person teams. Your team members will have about the same experience level as you. We'll be all developing a simple listing application. We'll wrap the day around (insert time). There's also going to be an evening party.
+Мероприятие будет проходить по адресу (вставить адрес). Карту проезда мы можешь посмотреть (<вставить ссылку на карту или инструкцию>).
 
-We have a lot of people wanting to get to the class, so if you can’t make it this time, let us know as soon as possible!
 
-If you have any questions, please don't hesitate to contact me. We'll also be updating the website at (insert address)!
+Повторная регистрация во второй день с (вставить время).
 
-Best, 
+А (вставить дату второго дня) мы окунемся в разработку. Работа будет проходить в небольших группах по 4-6 человек. Участники группы будут иметь такой же уровень знаний, как и ты. Все мы будем разрабатывать простое приложение (типа Pinterest). Второй день закончится около (вставить время). После этого возможно будет небольшая афтерпати, где ты сможешь свободно пообщаться о полученных знаниях с другими участниками и тренерами.
 
-(Signature)
+У нас огромный список ожидающих сободного места на воркшопе, так что пожалуйста, подтверди свое участие письмом как можно скорее!
 
-##### Sample letter of not being accepted
+Если у тебя есть какие-то вопросы, не стесняйся спрашивать!
 
-Title: Rails Girls - not accepted this time
 
-Dear applicant,
+С уважением, 
 
-Unfortunately we couldn’t fit you in the workshop this time. To be able to give personal guidance to each participant, we could only take a fraction of the applicants. This time we prioritized women with no previous programming experience. 
+(подпись)
 
-However, you're warmly welcome to the official afterparty. (Insert details). 
+##### Пример письма с отказом
 
-We'll also be most likely organizing more events in your city. Follow twitter.com/railsgirls or facebook.com/railsgirls for more information. 
+Тема письма: Rails Girls - ты в списке ожидающих
 
-There's always cancellations and we fill all available places, so we might still be taking in a couple of people! 
+Дорогой претендент,
 
-Best,
+К сожадению мы не можем пригласить тебя на мероприятие в этот раз. Желая персонально помочь каждому участнику, мы можем принять только часть заявок. Но мы занесли тебя в список ожидающих, и если освободиться место, мы обязательно тебе сообщим!
 
-(Signature)
+Скорее всего мы будем еще организовывать мероприятия в твоем городе. Следи за твиттером twitter.com/railsgirls или нашей фейсбук-страничкой facebook.com/railsgirls. 
+
+С уважением,
+
+(подпись)
 
 ##### Sample thank you letter for participants
 
