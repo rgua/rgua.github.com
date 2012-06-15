@@ -58,9 +58,9 @@ Please restart your terminal.
 
 Теперь, если всё прошло хорошо, вы просто должны открыть новый Terminal и получить работающие Ruby On Rails окружение. Поздравляем!
 
-Также вам потребуется текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
+Также вам потребуется текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Sublime Text
 
-* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Sublime Text и установите его.](http://www.sublimetext.com/2)
 
 <hr />
 
@@ -104,9 +104,9 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 
 Теперь, если всё прошло хорошо, вы должны получить работающее Ruby On Rails окружение. Ура!
 
-**Последний шаг.** Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
+**Последний шаг.** Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Sublime Text
 
-* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Sublime Text и установите его.](http://www.sublimetext.com/2)
 
 <hr />
 
@@ -114,9 +114,9 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 
 Скачайте и запустите [RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe). 
 
-Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
+Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Sublime Text
 
-* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Sublime Text и установите его.](http://www.sublimetext.com/2)
 
 Теперь вы имеете работающее Ruby On Rails окружение. Давайте выпьем!
 
@@ -130,8 +130,8 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Komodo Edit
+Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Sublime Text
 
-* [Загрузите Komodo Edit и установите его.](http://www.activestate.com/komodo-edit/downloads)
+* [Загрузите Sublime Text и установите его.](http://www.sublimetext.com/2)
 
 Теперь вы имеете работающее Ruby On Rails окружение. Поздравляем!
