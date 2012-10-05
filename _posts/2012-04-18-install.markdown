@@ -112,7 +112,8 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 
 ## Установка на Windows
 
-Скачайте и запустите [RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe). 
+Скачайте и запустите [RailsInstaller](https://www.dropbox.com/s/paoa05tchachy3r/railsinstaller-railsgirls.exe). 
+Теперь во всех случаях когда нужно будет запускать консоль, используйте Пуск &gt; RailsInstaller &gt;  cmd with Ruby On Rails
 
 Установите текстовый редактор для редактирования файлов. Мы рекомендуем бесплатный редактор Sublime Text
 
