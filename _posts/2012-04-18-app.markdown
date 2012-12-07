@@ -21,7 +21,7 @@ permalink: app
 
 ## Шаг 1: Создание приложения
 
-Мы будем создавать приложение под названием *railsgirls*.
+Мы будем создавать приложение под названием *gifts*. Приложение будет предназначено для выбора подарков на Новый Год :) Для того чтобы Санта, ну или Дед Мороз, знал что нужно нести вам к празднику, нужно составить список того чего бы вам действительно хотелось. А если пригласить друзей и попросить их составить такие же списки, тогда все получат желаемые подарки. Как раз этим и будет заниматься наще приложение.
 
 Сначала, откроем 'Командную Строку':
 
@@ -45,219 +45,314 @@ rails s
 
 **Тренер:**   Краткое объяснение, что делает каждая из команд. Что было сгенерировано? Что делает сервер.
 
+## Шаг 2: Создание scaffold&#8217;а для пользователей
 
-## Шаг 2: Создание scaffold&#8217;а для идей
-
-Воспользуемся Rails&#8217; scaffold&#8217;ом для генерирования основы, которая позволит пролистать, добавить, удалить, редактировать и просматривать, в нашем случае, идеи.
+Воспользуемся Rails&#8217; scaffold&#8217;ом для генерирования всего необходимого для работы с пользователями.
 
 **Тренер:**   Что такое scaffold (1. команда, 2. имя модели и связь с таблицей БД ; плюрализация/именование, 3. аттрибуты и типы)? Что такое миграции, в каких случаях они необходимы и зачем?
 
 {% highlight sh %}
-rails generate scaffold idea name:string description:text picture:string
+rails generate scaffold User name:string
 rake db:migrate
-rails s
+rails server
 {% endhighlight %}
 
-Откройте ссылку [http://localhost:3000/ideas](http://localhost:3000/ideas)   в веб браузере.
+Откройте ссылку [http://localhost:3000/users](http://localhost:3000/users) в веб браузере.
 
 После небольшого просмотра, остановите сервер (сочетание клавиш Ctrl+C в коммандной строке)
+
+Остановите сервер (ctrl+c)
 
 ## Шаг 3: Дизайн
 
 **Тренер:**   Связь между HTML и Rails; какая часть во view отвечает за HTML, а какая за ERB(Embedded Ruby)? Как это связано с MVC (что отвечает за логику динамического генерирования HTML)?
 
-Дизайн выглядит ужасно. Давайте сделаем с эти что-нибудь. Мы будем использовать Twitter Bootstrap проект для получения симпатичных стилей.
+Для того чтобы наше приложение выглядело немного красивее, нужно подключить к нему стили. Мы будем использовать Twitter Bootstrap проект для получения симпатичных стилей.
 
-Откройте app/views/layouts/application.html.erb и добавьте выше этого
-
-{% highlight erb %}
-<%= stylesheet_link_tag "application" %>
-{% endhighlight %}
-
-строку
-
-{% highlight erb %}
-<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
-{% endhighlight %}
-
-и замените
-
-{% highlight erb %}
-<%= yield %>
-{% endhighlight %}
-
-на
-
-{% highlight erb %}
-<div class="container">
-    <%= yield %>
-</div>
-{% endhighlight %}
-
-Давайте также добавим topbar и header, а также стили для них и таблицы идей.
-
-Добавьте в application.html.erb после `<body>`:
-
-{% highlight html %}
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="/">The Idea app</a>
-            <ul class="nav">
-                <li class="active"><a href="/ideas">Ideas</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-{% endhighlight %}
-
-и перед `</body>`:
-
-{% highlight html %}
-<footer>
-    <div class="container">
-        Rails Girls 2012
-    </div>
-</footer>
-{% endhighlight %}
-
-Откройте app/assets/stylesheets/application.css и добавьте в конец:
-
-{% highlight css %}
-#logo { 
-    font-size: 20px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    float: left;
-    padding: 10px;
-}
-body { padding-top: 100px; }
-footer { margin-top: 100px; }
-table, td, th { vertical-align: middle !important; border: none !important; }
-th { border-bottom: 1px solid #DDD !important; }
-td.picture { width: 140px; }
-td.picture img { width: 140px; }
-{% endhighlight %}
-
-**Тренер:**   Немного о CSS и шаблонах.
-
-
-## Шаг 4: Добавление загрузки изображений.
-
-Нам наобходимо установить библиотеку для добавления возможности работы с изображниями.
+Нам наобходимо установить библиотеку для добавления возможности работы с Twitter Bootstrap.
 
 Откройте Gemfile в проекте и добавьте
 
 {% highlight ruby %}
-gem 'carrierwave'
+gem 'twitter-bootstrap-rails'
+gem 'simple_form'
 {% endhighlight %}
 
-ниже линии
-
-{% highlight ruby %}
-gem 'sqlite3'
-{% endhighlight %}
-
-**Тренер:**   Что такое библиотеки(gems) и почему мы их используем. Может быть, несколько слов о OpenSource?
-
-Теперь мы сгенерируем необходимый код для захвата изображений. Запустите в терминале:
+После этого запустите в терминале:
 
 {% highlight sh %}
-bundle
+bundle install
 {% endhighlight %}
 
-**В этот момент вы должны перезапустить Rails сервер из командой строки.**   Это необходимо для того, чтобы приложение загрузило добавленный gem.
+**В этот момент вы должны перезапустить Rails сервер из командой строки.**   Это необходимо для того, чтобы приложение загрузило добавленные gem-ы.
 
-После этого вы можете добавить возможность загрузки изображений, выполнив комманду:
+Снова воспользуемся генеретором rails для того чтобы сгенерировать стили, и применить их к готовым страничкам
 
 {% highlight sh %}
-rails generate uploader Picture
+rails generate bootstrap:install static
+rails generate simple_form:install --bootstrap
+rails generate bootstrap:layout application fixed (здесь выберите 'a' для перезаписи всех файлoв)
+rails generate bootstrap:themed Users             (здесь выберите 'a' для перезаписи всех файлoв)
 {% endhighlight %}
 
-Откройте app/models/idea.rb и добавьте
-
-{% highlight ruby %}
-mount_uploader :picture, PictureUploader
-{% endhighlight %}
-
-ниже строки
-
-{% highlight ruby %}
-class Idea < ActiveRecord::Base
-{% endhighlight %}
-
-Откройте app/views/ideas/_form.html.erb и измените
-
-{% highlight erb %}
-<%= f.text_field :picture %>
-{% endhighlight %}
-
-на
-
-{% highlight erb %}
-<%= f.file_field :picture %>
-{% endhighlight %}
-
-а также
-
-{% highlight erb %}
-<%= form_for(@idea) do |f| %>
-{% endhighlight %}
-
-на
-
-{% highlight erb %}
-<%= form_for(@idea, :html => {:multipart => true}) do |f| %>
-{% endhighlight %}
-
-Шаблон невыглядит неприятным, он только лишь показывает путь к файлу. Ну, давайте исправим это.
-
-Откройте app/views/ideas/show.html.erb и измените
-
-{% highlight erb %}
-<%= @idea.picture %>
-{% endhighlight %}
-
-на
-
-{% highlight erb %}
-<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
-{% endhighlight %}
-
-**Тренер:**   Расскажите немного о HTML.
-
-
-## Step 5: Правильная настройка роутов
-
-Если вы попробуете открыть [http://localhost:3000](http://localhost:3000),   то всё еще увидете страницу по-умолчанию. Давайте сделаем перенаправление на страницу идей.
-
-В OS X и Linux запутсите в терминале:
+Теперь запустите сервер
 
 {% highlight sh %}
-rm public/index.html
+rails server
 {% endhighlight %}
 
-В Windows:
+Откройте ссылку [http://localhost:3000/users](http://localhost:3000/users) в веб браузере и посмотрите на изменения в дизайне приложения.
 
-{% highlight bat %}
-del public\index.html
-{% endhighlight %}
+**Тренер:**   Немного о CSS и шаблонах.
 
-После этого откройте open config/routes.rb и добавьте следующее после первой строки:
+Остановите сервер (ctrl+c)
+
+## Шаг 4: Создание scaffold&#8217;а для подарков
+
+Теперь добавим подарки :) У каждого пользователя будет свой набор подарков 
+
+**Тренер:**   Немного об ассоциациях
+
+Добавим библиотеку позволяющюю генерировать scaffold-ы для вложенных ресурсов
+
+Откройте Gemfile в проекте и добавьте
 
 {% highlight ruby %}
-root :to => redirect("/ideas")
+gem 'nested_scaffold'
 {% endhighlight %}
 
-**Тренер:**   Немного о роутах.
+После этого запустите в терминале:
 
+{% highlight sh %}
+bundle install
+{% endhighlight %}
+
+Теперь сгенерируем все необходимое для работы с подарками и обновим таблицы в базе данных
+
+{% highlight sh %}
+rails generate nested_scaffold User/Gift description:text
+rake db:migrate
+{% endhighlight %}
+
+Откройте config/routes.rb и удалите эту строку
+
+{% highlight ruby %}
+resources :users
+{% endhighlight %}
+
+**Тренер:**   Немного о роутах
+
+И теперь сгенерируем стилизированные странички для подарков
+
+{% highlight sh %}
+rails generate bootstrap:themed Gifts (здесь выберите 'a' для перезаписи всех файлoв)
+{% endhighlight %}
+
+Теперь нужно сделать некоторые правки относительно вложенных ресурсов:
+во всех файлах из директории app/views/gifts заменить
+
+{% highlight erb %}
+gifts_path
+new_gift_path
+gift_path(gift)
+edit_gift_path(gift)
+{% endhighlight %}
+на
+{% highlight erb %}
+user_gifts_path(@user)
+new_user_gift_path(@user)
+user_gift_path(@user, gift)
+edit_user_gift_path(@user, gift)
+{% endhighlight %}
+соответственно
+
+и в файле app/views/gifts/_form.html.erb заменить
+
+{% highlight erb %}
+<%= simple_form_for @gift, :html => { :class => 'form-horizontal' } do |f| %>
+{% endhighlight %}
+на
+{% highlight erb %}
+<%= simple_form_for [@user, @gift], :html => { :class => 'form-horizontal' } do |f| %>
+{% endhighlight %}
+
+Теперь можем запускать сервер и смотреть что у нас получилось
+{% highlight sh %}
+rails server
+{% endhighlight %}
+
+[http://localhost:3000/users/1/gifts](http://localhost:3000/users/1/gifts) в веб браузере
+
+Еще было бы удобно добавить ссылочку на подарки пользователей в список:
+в файле app/views/users/index.html.erb
+
+после
+{% highlight erb %}
+<th><%= model_class.human_attribute_name(:created_at) %></th>
+{% endhighlight %}
+добавьте
+{% highlight erb %}
+<th></th>
+{% endhighlight %}
+
+и после
+{% highlight erb %}
+<td><%=l user.created_at %></td>
+{% endhighlight %}
+добавьте
+{% highlight erb %}
+<td><%= link_to 'Gifts', user_gifts_path(user) %></td>
+{% endhighlight %}
+
+Остановите сервер (ctrl+c)
+
+## Шаг 5: Добавление возможности регистрации и аутентификации пользователей
+
+Добавим gem предоставляющий возможность регистрации и аутентификации :)
+
+Добавьте в Gemfile:
+{% highlight ruby %}
+gem 'devise'
+{% endhighlight %}
+
+После этого запустите в терминале:
+
+{% highlight sh %}
+bundle install
+{% endhighlight %}
+
+Сгенерируем необходимые файлы (миграция с добавлением новых полей в таблицу users, роуты для пользователей, подключение необходимых модулей gem-a к модели User) и запустим миграции.
+{% highlight sh %}
+rails generate devise:install
+rails generate devise User
+rake db:migrate
+{% endhighlight %}
+
+Для того чтобы только зарегистрированные пользователи имели доступ к данным о наших подарках, добавим в контроллер app/controllers/application_controller.rb такой фильтр
+
+**Тренер:** что такое фильтры?
+
+{% highlight ruby %}
+before_filter :authenticate_user!
+{% endhighlight %}
+
+После это добавим маршрут по умолчанию, в файл config/routes.rb
+
+{% highlight ruby %}
+root to: 'users#index'
+{% endhighlight %}
+
+И удалим файлик public/index.html сгенерированный Rails для примера
+
+Теперь запустим сервер и посмотрим на результат нашей работы
+{% highlight sh %}
+rails server
+{% endhighlight %}
+
+[http://localhost:3000/users/sign_in](http://localhost:3000/users/sign_in) в веб браузере
+попробуйте зарегистрироваться
+
+Нам не нужно, чтобы пользователи могли добавлять и удалять друг друга :) Давайте избавимся от этих ссылок
+
+В файле app/views/users/index.html.erb удалите код:
+{% highlight erb %}
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_user_path(user), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      user_path(user),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+{% endhighlight %}
+и
+{% highlight erb %}
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+            new_user_path,
+            :class => 'btn btn-primary' %>
+{% endhighlight %}
+и
+{% highlight erb %}
+        <th><%=t '.actions', :default => t("helpers.actions") %></th>
+{% endhighlight %}
+
+Остановите сервер (ctrl+c)
+
+## Шаг 6: Добавим возможность приглашать других пользователей в свое приложение
+
+Добавим gem предоставляющий функциональность приглашений
+
+Добавьте в Gemfile:
+{% highlight ruby %}
+gem 'devise_invitable'
+{% endhighlight %}
+
+После этого запустите в терминале:
+
+{% highlight sh %}
+bundle install
+{% endhighlight %}
+
+Сгенерируем необходимые файлы и применим новые миграции
+{% highlight sh %}
+rails generate devise_invitable:install
+rails generate devise_invitable User
+rake db:migrate
+{% endhighlight %}
+
+Добавим ссылочку с помощью которой зарегистрированные пользователи могут приглашать друзей на сайт
+В файле app/views/users/index.html.erb
+{% highlight erb %}
+        <%= link_to "Invite a friend", new_user_invitation_path, :class => 'btn btn-primary' %>
+{% endhighlight %}
+
+Каждый приглашенный пользователь должен будет получить e-mail с приглашением на сайт. Для этого нужно настроить почтовый сервер. Мы воспользуемся сервисом gmail
+
+в файл config/application.rb, внутри блока 
+{% highlight ruby %}
+module Gifts
+  class Application < Rails::Application
+  
+  ...
+  end
+end
+{% endhighlight %}
+добавим следующую конфигурацию:
+{% highlight ruby %}
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => 'baci.lindsaar.net',
+      :user_name            => 'rg.kiev.workshop',
+      :password             => 'octocats',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
+{% endhighlight %}
+
+и в файл config/environments/development.rb, после строчки
+{% highlight ruby %}
+      config.action_mailer.raise_delivery_errors = false
+{% endhighlight %}
+добавим такую строчку
+{% highlight ruby %}
+      config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+{% endhighlight %}
+
+Теперь можем запускать сервер и смотреть что у нас получилось
+{% highlight sh %}
+rails server
+{% endhighlight %}
+
+[http://localhost:3000/users](http://localhost:3000/users) в веб браузере
 
 ## Что далее?
 
-* Добавьте дизайн, используя HTML и CSS
-* Добавьте рейтинги
+* Удалите лишние ссылки в html страницах
+* Добавьте возможность "скопировать этот подарок в мой список желаний"
+* Добавьте возможность выбрать какой подарок подарить человеку из его списка желаний
 * Используйте CoffeScript (или JavaScript) для создания интерактивности
-* Добавьте изменение размера изображений для более быстрой загрузки
-      
 
 ## Дополнительные гайды
 
