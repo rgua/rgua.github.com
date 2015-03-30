@@ -21,7 +21,7 @@ permalink: app
 
 ## Шаг 1: Создание приложения
 
-Мы будем создавать приложение под названием *gifts*. Приложение будет предназначено для выбора подарков на Новый Год :) Для того чтобы Санта, ну или Дед Мороз, знал что нужно нести вам к празднику, нужно составить список того чего бы вам действительно хотелось. А если пригласить друзей и попросить их составить такие же списки, тогда все получат желаемые подарки. Как раз этим и будет заниматься наше приложение.
+Мы будем создавать приложение под названием *gifts*. Приложение будет предназначено для выбора подарков на Новый Год :) Для того чтобы Санта, ну или Дед Мороз, знал что нужно нести вам к празднику, нужно составить список того, чего бы вам действительно хотелось. А если пригласить друзей и попросить их составить такие же списки, тогда все получат желаемые подарки. Как раз этим и будет заниматься наше приложение.
 
 Сначала, откроем 'Командную Строку':
 
@@ -65,7 +65,7 @@ rails server
 
 ## Шаг 3: Дизайн
 
-**Тренер:**   Связь между HTML и Rails; какая часть во view отвечает за HTML, а какая за ERB(Embedded Ruby)? Как это связано с MVC (что отвечает за логику динамического генерирования HTML)?
+**Тренер:**   Связь между HTML и Rails; какая часть во view отвечает за HTML, а какая за ERB (Embedded Ruby)? Как это связано с MVC (что отвечает за логику динамического генерирования HTML)?
 
 Для того чтобы наше приложение выглядело немного красивее, нужно подключить к нему стили. Мы будем использовать Twitter Bootstrap проект для получения симпатичных стилей.
 
@@ -86,14 +86,26 @@ bundle install
 
 **В этот момент вы должны перезапустить Rails сервер из командой строки.**   Это необходимо для того, чтобы приложение загрузило добавленные gem-ы.
 
-Снова воспользуемся генеретором rails для того чтобы сгенерировать стили, и применить их к готовым страничкам
+Снова воспользуемся генератором rails для того чтобы сгенерировать стили, и применить их к готовым страничкам
 
 {% highlight sh %}
 rails generate bootstrap:install static
 rails generate simple_form:install --bootstrap
-rails generate bootstrap:layout application fixed (здесь выберите 'a' для перезаписи всех файлoв)
-rails generate bootstrap:themed Users             (здесь выберите 'a' для перезаписи всех файлoв)
+rails generate bootstrap:layout application fixed
 {% endhighlight %}
+здесь выберите
+{% highlight sh %}
+a
+{% endhighlight %}
+для перезаписи всех файлoв
+{% highlight sh %}
+rails generate bootstrap:themed Users
+{% endhighlight %}
+здесь выберите
+{% highlight sh %}
+a
+{% endhighlight %}
+для перезаписи всех файлoв
 
 Теперь запустите сервер
 
@@ -101,7 +113,7 @@ rails generate bootstrap:themed Users             (здесь выберите '
 rails server
 {% endhighlight %}
 
-Откройте ссылку [http://localhost:3000/users](http://localhost:3000/users) в веб браузере и посмотрите на изменения в дизайне приложения.
+Откройте ссылку [http://localhost:3000/users](http://localhost:3000/users) в веб-браузере и посмотрите на изменения в дизайне приложения.
 
 **Тренер:**   Немного о CSS и шаблонах.
 
@@ -113,40 +125,37 @@ rails server
 
 **Тренер:**   Немного об ассоциациях
 
-Добавим библиотеку позволяющую генерировать scaffold-ы для вложенных ресурсов
-
-Откройте Gemfile в проекте и добавьте
-
-{% highlight ruby %}
-gem 'nested_scaffold'
-{% endhighlight %}
-
-После этого запустите в терминале:
+Сгенерируем всё необходимое для работы с подарками и обновим таблицы в базе данных
 
 {% highlight sh %}
-bundle install
-{% endhighlight %}
-
-Теперь сгенерируем все необходимое для работы с подарками и обновим таблицы в базе данных
-
-{% highlight sh %}
-rails generate nested_scaffold User/Gift description:text
+rails generate scaffold Gift description:text user:references
 rake db:migrate
 {% endhighlight %}
 
-Откройте config/routes.rb и удалите эту строку
+Откройте config/routes.rb и замените строки
 
 {% highlight ruby %}
-resources :users
+  resources :gifts
+  resources :users
 {% endhighlight %}
-
+на
+{% highlight ruby %}
+  resources :users do
+    resources :gifts
+  end
+{% endhighlight %}
 **Тренер:**   Немного о роутах
 
 И теперь сгенерируем стилизированные странички для подарков
 
 {% highlight sh %}
-rails generate bootstrap:themed Gifts (здесь выберите 'a' для перезаписи всех файлoв)
+rails generate bootstrap:themed Gifts
 {% endhighlight %}
+здесь выберите
+{% highlight sh %}
+a
+{% endhighlight %}
+для перезаписи всех файлoв
 
 Теперь нужно сделать некоторые правки относительно вложенных ресурсов:
 во всех файлах из директории app/views/gifts заменить
@@ -183,7 +192,7 @@ rails server
 
 [http://localhost:3000/users/1/gifts](http://localhost:3000/users/1/gifts) в веб браузере
 
-Еще было бы удобно добавить ссылочку на подарки пользователей в список:
+Ещё было бы удобно добавить ссылочку на подарки пользователей в список:
 в файле app/views/users/index.html.erb
 
 после
@@ -307,7 +316,7 @@ rake db:migrate
         <%= link_to "Invite a friend", new_user_invitation_path, :class => 'btn btn-primary' %>
 {% endhighlight %}
 
-Каждый приглашенный пользователь должен будет получить e-mail с приглашением на сайт. Для этого нужно настроить почтовый сервер. Мы воспользуемся сервисом gmail
+Каждый приглашённый пользователь должен будет получить e-mail с приглашением на сайт. Для этого нужно настроить почтовый сервер. Мы воспользуемся сервисом gmail
 
 в файл config/application.rb, внутри блока 
 {% highlight ruby %}
@@ -340,12 +349,12 @@ end
       config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 {% endhighlight %}
 
-Теперь можем запускать сервер и смотреть что у нас получилось
+Теперь можем запускать сервер и смотреть, что у нас получилось
 {% highlight sh %}
 rails server
 {% endhighlight %}
 
-[http://localhost:3000/users](http://localhost:3000/users) в веб браузере
+[http://localhost:3000/users](http://localhost:3000/users) в веб-браузере
 
 ## Что далее?
 
